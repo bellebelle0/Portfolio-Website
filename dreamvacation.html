@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css"
+			href="style.css">
+		<title> Portfolio Website </title>
+		<style>
+		body {
+		background-color: #003399;
+		}
+		#main {
+		color: goldenrod;
+		}
+		a:link {
+			color: goldenrod;
+			text-decoration: underline;
+			}
+		a:visited {
+			color: darkgoldenrod;
+			text-decoration: underline;
+			}
+		</style>
+			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYqDpjKici-kT2fr6olPsptdyhKjADZUQ"></script>
+
+		<script>
+		function myMap() {
+		var myCenter = new google.maps.LatLng(64.126521, -21.817439);
+  		//myCenter is a latitude/longitude (LatLng) object which stores a point//
+ 	 	var mapCanvas = document.getElementById("googleMap");
+  		//mapCanvas stores the link to the div that the map will go in//
+  		var mapOptions = {center: myCenter, zoom: 5};
+ 		 //mapOptions stores the options for the map, note: we used myCenter, the variable storing
+ 		 //a point, in the center option//
+ 		 var map = new google.maps.Map(mapCanvas, mapOptions);
+  		//map creates the map itself, we gave it the variables for the mapCanvas (where to put it)
+ 		 //and the mapOptions (what it wil look like//
+  		var marker = new google.maps.Marker({position:myCenter});
+  		//marker creates a new marker at the myCenter location (we used the myCenter LatLng variable again//
+  		marker.setMap(map);
+ 	 	//follows object.method notation
+ 		 //marker is the object, is being told to set its map to the map we created two lines up. This puts the marker
+ 		 //on the map//
+ 	 
+ 	 	var origin = new google.maps.LatLng(63.430515,10.395053);
+ 	 	var marker2 = new google.maps.Marker({position:origin});
+ 		 marker2.setMap(map);
+		var denmark = new google.maps.LatLng (55.403756,10.402370);
+		var markerD = new google.maps.Marker ({position:denmark});
+		markerD.setMap(map);
+	
+		var england = new google.maps.LatLng(51.507351, -0.127758);
+		var markerE = new google.maps.Marker ({position:england});
+		markerE.setMap(map);
+	
+		var spain = new google.maps.LatLng(41.385064,2.173403);
+		var markerS = new google.maps.Marker({position:spain});
+		markerS.setMap(map);
+	
+		var italy = new google.maps.LatLng(40.851775,14.268124);
+		var markerI = new google.maps.Marker({position: italy});
+		markerI.setMap(map);
+	
+		var korea = new google.maps.LatLng (37.566535,126.977969)
+		var markerK = new google.maps.Marker ({position: korea});
+		markerK.setMap(map);
+		var japan = new google.maps.LatLng (35.689487,139.691706)
+		var markerJ = new google.maps.Marker ({position: japan});
+		markerJ.setMap(map);
+		var myTrip = [myCenter,origin,denmark,england,spain,italy,korea,japan];
+	var flightPath = new google.maps.Polyline({path:myTrip, strokeColor:"#ff1a1a", strokeOpacity:0.8, strokeWeight:2});
+	flightPath.setMap(map);
+	
+	}
+	google.maps.event.addDomListener(window, 'load', myMap);
+	</script>
+	</head>
+	<body>
+	<ul id="navbar">
+			<li class="navitem"><a href="index.html">Home Page</a></li>
+			<li class="navitem"><a href="elmosworldpage.html">ELMO</a></li>
+			<li class="navitem"><a href="bonsai.html">Bonsai</a></li>
+			<li class="navitem"><a class="active" href="dreamvacation.html">Dream Vacation</a></li>
+			<li class="navitem"><a href="scratch.html">Scratch Game</a></li>
+			<li class="navitem"><a href="Python.html">Python Story</a></li>
+			<li class="navitem"><a href="imgart.html">Image Artist</a></li>
+			<li class="navitem"><a href="index.html">App Inventor</a></li>
+		</ul>
+	<div id="main">
+		<h1> Dream Vacation </h1>
+		<p> This page features Annabelle's Dream Vacation, were money and time not a matter. Below is a sample of the overview map.</p>
+		<p> Link to the page here: <a href="https://bellebelle0.github.io/Dream-Vacation/">Dream Vacation</a></p></div>
+	<div id="googleMap" style="height:1200px;width:1600px;"></div>
+	</body>
+	
+</html>

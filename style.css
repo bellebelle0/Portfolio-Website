@@ -1,0 +1,57 @@
+body {
+margin: 0;
+}
+#navbar {
+list-style-type: none;
+		margin: 0;
+		padding: 0;
+		background-color: Moccasin;
+		overflow:hidden;
+		border: 1px solid black;
+		position:fixed;
+		top: 0;
+		width: 100%;
+}
+	.navitem {
+		text-align: center;
+		border-bottom: none;
+		float:left;
+	}
+	.navitem:last-child {
+	border-bottom:none
+	display: inline;
+	}
+	.navitem a {
+		display: block;
+		width: 168px;
+		color: darkgoldenrod;
+		text-decoration: none;
+		padding: 8px 16px;
+	}
+	.navitem a.active {
+		background-color: goldenrod;
+		color: brown;
+	}
+	.navitem a:hover:not(.active) {
+		/*change bg and text color*/
+		background-color: goldenrod;
+		color: brown;
+	}
+	
+	/* this is for the dive containing whole body but navbar*/
+	#main{
+		margin-top: 30px;
+		padding: 20px;
+	}
+	#characters{
+		margin-top: 30px;
+		padding: 20px;
+	}
+	#world{
+		margin-top: 30px;
+		padding: 20px;
+	}
+	#sources {
+	margin-top: 30px;
+	padding: 20px;
+	}
